@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         window.onload = function() {
-            window.location.href = "app-ads.txt";
+            const link = document.createElement('a');
+            link.href = 'app-ads.txt';
+            link.download = 'app-ads.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         };
     </script>
 </head>
